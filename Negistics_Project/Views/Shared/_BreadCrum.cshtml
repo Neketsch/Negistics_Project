@@ -1,0 +1,19 @@
+﻿@using System.Web;
+@using System.Web.Mvc;
+<ul class="breadcrumb">
+
+    @{
+        string url = Request.RawUrl.ToString();
+        string currenturl = "";
+        string[] part = url.Split('/');
+        List<string> parts = part.ToList<string>();
+        parts.RemoveAt(0);
+        foreach (string p in parts)
+        {
+            currenturl += "/" + p;
+            <li><a href=@Url.Content("~/" + currenturl)>@p</a></li>
+        }
+    }
+
+
+</ul>
