@@ -99,7 +99,7 @@ namespace Negistics_Project.Controllers
                 }
                 else
                 {
-                    ViewBag.Error = "Please  Upload Files in .xls, .xlsx or .csv format";
+                    ViewBag.Error = "Please Upload Files in .xls, .xlsx or .csv format";
 
                 }
 
